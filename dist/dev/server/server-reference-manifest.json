@@ -1,0 +1,184 @@
+{
+  "node": {
+    "005334a24fb31c2d4ad71563cf3deee45950a6f63c": {
+      "workers": {
+        "app/_not-found/page": {
+          "moduleId": "[project]/.next-internal/server/app/_not-found/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "signOut",
+          "filename": "src/app/actions/auth.ts"
+        },
+        "app/page": {
+          "moduleId": "[project]/.next-internal/server/app/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/app/actions/events.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "signOut",
+          "filename": "src/app/actions/auth.ts"
+        }
+      },
+      "layer": {
+        "app/_not-found/page": "action-browser",
+        "app/page": "action-browser"
+      },
+      "filename": "src/app/actions/auth.ts",
+      "exportedName": "signOut"
+    },
+    "00e5218602d875dddefa1a82c33182d89cefdc38b7": {
+      "workers": {
+        "app/_not-found/page": {
+          "moduleId": "[project]/.next-internal/server/app/_not-found/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "getUser",
+          "filename": "src/app/actions/auth.ts"
+        },
+        "app/page": {
+          "moduleId": "[project]/.next-internal/server/app/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/app/actions/events.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "getUser",
+          "filename": "src/app/actions/auth.ts"
+        }
+      },
+      "layer": {
+        "app/_not-found/page": "rsc",
+        "app/page": "rsc"
+      },
+      "filename": "src/app/actions/auth.ts",
+      "exportedName": "getUser"
+    },
+    "40535582dc7af694f8f8d3681e6ddf61edabeb028a": {
+      "workers": {
+        "app/_not-found/page": {
+          "moduleId": "[project]/.next-internal/server/app/_not-found/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "signIn",
+          "filename": "src/app/actions/auth.ts"
+        },
+        "app/page": {
+          "moduleId": "[project]/.next-internal/server/app/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/app/actions/events.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "signIn",
+          "filename": "src/app/actions/auth.ts"
+        }
+      },
+      "layer": {
+        "app/_not-found/page": "rsc",
+        "app/page": "rsc"
+      },
+      "filename": "src/app/actions/auth.ts",
+      "exportedName": "signIn"
+    },
+    "408ebfd270c11f426a0642850c815ec30fce7c1f29": {
+      "workers": {
+        "app/_not-found/page": {
+          "moduleId": "[project]/.next-internal/server/app/_not-found/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "signUp",
+          "filename": "src/app/actions/auth.ts"
+        },
+        "app/page": {
+          "moduleId": "[project]/.next-internal/server/app/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/app/actions/events.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "signUp",
+          "filename": "src/app/actions/auth.ts"
+        }
+      },
+      "layer": {
+        "app/_not-found/page": "rsc",
+        "app/page": "rsc"
+      },
+      "filename": "src/app/actions/auth.ts",
+      "exportedName": "signUp"
+    },
+    "000eba917d230547ed8eacf1dc37afd8a13d7b380b": {
+      "workers": {
+        "app/page": {
+          "moduleId": "[project]/.next-internal/server/app/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/app/actions/events.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "getUpcomingEvents",
+          "filename": "src/app/actions/events.ts"
+        }
+      },
+      "layer": {
+        "app/page": "rsc"
+      },
+      "filename": "src/app/actions/events.ts",
+      "exportedName": "getUpcomingEvents"
+    },
+    "401e5f0748b8d080e8e8e00123a271f109f48ab2e6": {
+      "workers": {
+        "app/page": {
+          "moduleId": "[project]/.next-internal/server/app/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/app/actions/events.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "createEvent",
+          "filename": "src/app/actions/events.ts"
+        }
+      },
+      "layer": {
+        "app/page": "rsc"
+      },
+      "filename": "src/app/actions/events.ts",
+      "exportedName": "createEvent"
+    },
+    "4020f772ea90e2693530bd131a93a350c5b8f4bb79": {
+      "workers": {
+        "app/page": {
+          "moduleId": "[project]/.next-internal/server/app/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/app/actions/events.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "getEvents",
+          "filename": "src/app/actions/events.ts"
+        }
+      },
+      "layer": {
+        "app/page": "rsc"
+      },
+      "filename": "src/app/actions/events.ts",
+      "exportedName": "getEvents"
+    },
+    "4027c03e82bccbe875bd57e23cf767f0863fd50b8f": {
+      "workers": {
+        "app/page": {
+          "moduleId": "[project]/.next-internal/server/app/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/app/actions/events.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "getEventById",
+          "filename": "src/app/actions/events.ts"
+        }
+      },
+      "layer": {
+        "app/page": "rsc"
+      },
+      "filename": "src/app/actions/events.ts",
+      "exportedName": "getEventById"
+    },
+    "404e2f3de0e002da75c30e7ba831b230a67b139361": {
+      "workers": {
+        "app/page": {
+          "moduleId": "[project]/.next-internal/server/app/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/app/actions/events.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "deleteEvent",
+          "filename": "src/app/actions/events.ts"
+        }
+      },
+      "layer": {
+        "app/page": "rsc"
+      },
+      "filename": "src/app/actions/events.ts",
+      "exportedName": "deleteEvent"
+    },
+    "607bb62043108e8350a639e22fff49747fa39186c4": {
+      "workers": {
+        "app/page": {
+          "moduleId": "[project]/.next-internal/server/app/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/app/actions/events.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "updateEvent",
+          "filename": "src/app/actions/events.ts"
+        }
+      },
+      "layer": {
+        "app/page": "rsc"
+      },
+      "filename": "src/app/actions/events.ts",
+      "exportedName": "updateEvent"
+    }
+  },
+  "edge": {},
+  "encryptionKey": "G7gCa6sGwpcw/wroZknRpnRThkZVVOFDA9rhYXiOxEY="
+}

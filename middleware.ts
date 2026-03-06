@@ -5,25 +5,31 @@ import { updateSession } from "@/lib/supabase/middleware";
 const protectedRoutes = ["/dashboard", "/events"];
 
 export async function middleware(request: NextRequest) {
-  // First, update the session
-  const { supabaseResponse, user } = await updateSession(request);
+  try {
+    // First, update the session
+    const { supabaseResponse, user } = await updateSession(request);
 
-  const pathname = request.nextUrl.pathname;
+    const pathname = request.nextUrl.pathname;
 
-  // Check if the current path is a protected route
-  const isProtectedRoute = protectedRoutes.some(
-    (route) => pathname === route || pathname.startsWith(`${route}/`),
-  );
+    // Check if the current path is a protected route
+    const isProtectedRoute = protectedRoutes.some(
+      (route) => pathname === route || pathname.startsWith(`${route}/`),
+    );
 
-  // If accessing a protected route without authentication, redirect to login
-  if (isProtectedRoute && !user) {
-    const redirectUrl = new URL("/login", request.url);
-    // Add the original URL as a query param to redirect back after login
-    redirectUrl.searchParams.set("redirectTo", pathname);
-    return NextResponse.redirect(redirectUrl);
+    // If accessing a protected route without authentication, redirect to login
+    if (isProtectedRoute && !user) {
+      const redirectUrl = new URL("/login", request.url);
+      // Add the original URL as a query param to redirect back after login
+      redirectUrl.searchParams.set("redirectTo", pathname);
+      return NextResponse.redirect(redirectUrl);
+    }
+
+    return supabaseResponse;
+  } catch (error) {
+    console.error("Middleware error:", error);
+    // Return a simple response to prevent complete failure
+    return NextResponse.next();
   }
-
-  return supabaseResponse;
 }
 
 export const config = {

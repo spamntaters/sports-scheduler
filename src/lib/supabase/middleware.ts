@@ -10,40 +10,62 @@ interface UpdateSessionResult {
 export async function updateSession(
   request: NextRequest,
 ): Promise<UpdateSessionResult> {
-  let supabaseResponse = NextResponse.next({
-    request,
+  // Create initial response
+  let response = NextResponse.next({
+    request: {
+      headers: request.headers,
+    },
   });
 
-  const supabase = createServerClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_DEFAULT_KEY!,
-    {
+  // Check for required env vars
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
+
+  if (!supabaseUrl || !supabaseKey) {
+    console.error("Missing Supabase environment variables");
+    return { supabaseResponse: response, user: null };
+  }
+
+  try {
+    const supabase = createServerClient(supabaseUrl, supabaseKey, {
       cookies: {
         getAll() {
           return request.cookies.getAll();
         },
         setAll(cookiesToSet) {
-          cookiesToSet.forEach(({ name, value, options }) => {
+          // Set cookies on the request
+          cookiesToSet.forEach(({ name, value }) => {
             request.cookies.set(name, value);
           });
 
-          supabaseResponse = NextResponse.next({
-            request,
+          // Create new response with updated request
+          response = NextResponse.next({
+            request: {
+              headers: request.headers,
+            },
           });
 
+          // Set cookies on the response
           cookiesToSet.forEach(({ name, value, options }) => {
-            supabaseResponse.cookies.set(name, value, options);
+            response.cookies.set(name, value, options);
           });
         },
       },
-    },
-  );
+    });
 
-  // This will refresh session if expired - required for Server Components
-  // https://supabase.com/docs/guides/auth/auth-helpers/nextjs#managing-session-with-middleware
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
+    const {
+      data: { user },
+      error,
+    } = await supabase.auth.getUser();
 
-  return { supabaseResponse, user };
+    if (error) {
+      console.error("Supabase auth error:", error);
+      return { supabaseResponse: response, user: null };
+    }
+
+    return { supabaseResponse: response, user };
+  } catch (error) {
+    console.error("Middleware Supabase error:", error);
+    return { supabaseResponse: response, user: null };
+  }
 }
